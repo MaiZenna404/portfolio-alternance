@@ -23,6 +23,7 @@
     --destructive: 9 96% 48%;
     --destructive-foreground: 0 0% 100%;
     --ring: 51 96% 69%;
+    --radius: 0.5rem;
   }
 }
 
