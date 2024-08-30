@@ -6,8 +6,8 @@ export const Hero = () => {
 <Section className ="flex max-sm:flex-col items-start pt-20">
 <div className="flex-[3]">
 <h2 className="text-2xl font-bold font-caption text-primary pb-5">Mai Than</h2>
-<p className="text-xl font-sans text-secondary pb-4">2nd Year Computer Science Student</p>
-<p className="text-lg font-sans text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, repellendus esse ad neque aliquam velit distinctio quibusdam odit. Et officia velit minus accusamus ipsa sequi eaque. Impedit sed non rem?</p>
+<p className="text-xl font-caption text-secondary pb-4">2nd Year Computer Science Student</p>
+<p className="text-base font-caption text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, repellendus esse ad neque aliquam velit distinctio quibusdam odit. Et officia velit minus accusamus ipsa sequi eaque. Impedit sed non rem?</p>
 </div>
 
 <div className="flex-1">
