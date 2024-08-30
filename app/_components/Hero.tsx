@@ -1,11 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import { ComponentPropsWithRef } from "react";
+import { ComponentPropsWithRef, ComponentPropsWithoutRef } from 'react';
 import { Section } from "./Section";
 import { cn } from "@/lib/utils";
+import { ReactIcon } from './icons/ReactIcon';
+import { JavaIcon } from './icons/JavaIcon';
+import { CSharpIcon } from './icons/CSharp';
 
-
+// Var qui permet de surligner les éléments importants
 const Code = ({ className, ...props}: ComponentPropsWithRef<"span">) => {
-    return <span className={cn("font-mono bg-accent/30 border border-accent p-1 -m-1")} {...props}
+    return <span className={cn("font-mono bg-accent/30 border border-accent p-1 -m-1 rounded-sm")} {...props}
     />
 }
 
@@ -14,9 +17,10 @@ export const Hero = () => {
 
 <Section className ="flex max-sm:flex-col items-start pt-20">
 <div className="flex-[3]">
-<h2 className="text-2xl font-bold font-caption text-primary pb-5">Mai Than</h2>
-<p className="text-xl font-caption text-secondary pb-4">2nd Year Computer Science Student</p>
-<p className="text-base font-caption text-secondary">Lorem ipsum, <Code>Lorem</Code> dolor sit amet consectetur adipisicing elit. Hic, repellendus esse ad neque aliquam velit distinctio quibusdam odit. Et officia velit minus accusamus ipsa sequi eaque. Impedit sed non rem?</p>
+
+<h3 className="text-xl font-caption text-secondary pb-4">Hello, I'm Mai <span className="text-3xl">✌️</span></h3>
+<p className="text-base font-caption text-secondary">Student in Computer Sciences, my aim is to become a Frontend developer. For now, I'm still searching what suits me best, but I do love coding in <Code><ReactIcon size={18} className="inline"/> React</Code> and <Code>NextJs</Code> .</p>
+<p className="text-base font-caption text-secondary">Currently, I'm learning <Code><JavaIcon size={18} className="inline"/> Java</Code> and <Code><CSharpIcon size={18} className="inline"/> C#</Code> basis.</p>
 </div>
 
 <div className="flex-1">
