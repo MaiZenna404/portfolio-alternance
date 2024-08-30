@@ -1,5 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
+import { ComponentPropsWithRef } from "react";
 import { Section } from "./Section";
+import { cn } from "@/lib/utils";
+
+
+const Code = ({ className, ...props}: ComponentPropsWithRef<"span">) => {
+    return <span className={cn("bg-accent/30 border-accent p-1 -m-1")} {...props}
+    />
+}
+
 export const Hero = () => {
     return (
 
@@ -7,7 +16,7 @@ export const Hero = () => {
 <div className="flex-[3]">
 <h2 className="text-2xl font-bold font-caption text-primary pb-5">Mai Than</h2>
 <p className="text-xl font-caption text-secondary pb-4">2nd Year Computer Science Student</p>
-<p className="text-base font-caption text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, repellendus esse ad neque aliquam velit distinctio quibusdam odit. Et officia velit minus accusamus ipsa sequi eaque. Impedit sed non rem?</p>
+<p className="text-base font-caption text-secondary">Lorem ipsum, <Code>Lorem</Code> dolor sit amet consectetur adipisicing elit. Hic, repellendus esse ad neque aliquam velit distinctio quibusdam odit. Et officia velit minus accusamus ipsa sequi eaque. Impedit sed non rem?</p>
 </div>
 
 <div className="flex-1">

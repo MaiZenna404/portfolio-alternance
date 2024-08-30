@@ -20,6 +20,8 @@ const config = {
     fontFamily: { // Def des fonts utilisés : Geist Sans & KodeMono
       sans: ["var(--font-geist-sans)"],
       caption: ["var(--font-caption)"],
+      mono: ["var(--font-geist-mono)"],
+
     },
     extend: {
       colors: {
