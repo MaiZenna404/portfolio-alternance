@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 
 const Code = ({ className, ...props}: ComponentPropsWithRef<"span">) => {
-    return <span className={cn("bg-accent/30 border-accent p-1 -m-1")} {...props}
+    return <span className={cn("font-mono bg-accent/30 border border-accent p-1 -m-1")} {...props}
     />
 }
 
