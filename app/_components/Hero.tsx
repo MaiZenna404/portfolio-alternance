@@ -16,7 +16,7 @@ const Code = ({ className, ...props}: ComponentPropsWithRef<"span">) => {
 export const Hero = () => {
     return (
 
-<Section className ="flex max-sm:flex-col items-start pt-20">
+<Section className ="flex max-sm:flex-col items-start">
 <div className="flex-[3]">
 
 <h3 className="text-xl font-caption text-secondary pb-4">Hello, I'm Mai <span className="text-3xl">✌️</span></h3>
@@ -24,8 +24,8 @@ export const Hero = () => {
 <p className="text-base font-caption text-secondary mt-4">Currently, I'm learning <Code><JavaIcon size={18} className="inline"/> Java</Code> and <Code><CSharpIcon size={18} className="inline"/> C#</Code> basis.</p>
 </div>
 
-<div className="flex-1">
-    <img className="rounded-full ml-12" src="https://media.licdn.com/dms/image/v2/D4E03AQF2OTX4t1HPjA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1702993005021?e=1730332800&v=beta&t=tKeIPYFMpAngVM17eiLEThKZLAmp1kryEWI1nSbGRIQ" alt="My profile pic" />
+<div className="flex-1 max-md::m-auto ml-auto">
+    <img className="w-full h-auto max-w-xs max-md:w-56 rounded-full ml-12" src="https://media.licdn.com/dms/image/v2/D4E03AQF2OTX4t1HPjA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1702993005021?e=1730332800&v=beta&t=tKeIPYFMpAngVM17eiLEThKZLAmp1kryEWI1nSbGRIQ" alt="My profile pic" />
 </div>
 </Section>
 

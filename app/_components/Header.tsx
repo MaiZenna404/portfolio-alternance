@@ -11,14 +11,17 @@ export const Header = () => {
         <header className="sticky top-10 py-5">
             <Section className="flex items-baseline">
             <h2 className="text-2xl font-bold font-caption text-primary">Mai Than</h2>
+            
+            {/*
             <p className="text-base font-caption text-secondary ml-24">2nd Year Computer Science Student</p>
+            */}
 
             <div className="flex-1" />
 
             <ul>
                 <Link 
                 href="https://www.linkedin.com/feed/"
-                className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0 mx-3")} > <LinkedInIcon size={15} className="text-foreground"/>
+                className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0 mx-3")}> <LinkedInIcon size={15} className="text-foreground"/>
                 </Link>
 
                 <Link 
