@@ -24,7 +24,7 @@ export const Hero = () => {
 <p className="text-base font-caption text-secondary mt-4">Currently, I'm learning <Code><JavaIcon size={18} className="inline"/> Java</Code> and <Code><CSharpIcon size={18} className="inline"/> C#</Code> basis.</p>
 </div>
 
-<div className="flex-1 max-md::m-auto ml-auto">
+<div className="flex-1 m-auto">
     <img className="w-full h-auto max-w-xs max-md:w-56 rounded-full ml-12" src="https://media.licdn.com/dms/image/v2/D4E03AQF2OTX4t1HPjA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1702993005021?e=1730332800&v=beta&t=tKeIPYFMpAngVM17eiLEThKZLAmp1kryEWI1nSbGRIQ" alt="My profile pic" />
 </div>
 </Section>
