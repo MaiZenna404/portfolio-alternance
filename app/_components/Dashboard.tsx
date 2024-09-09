@@ -1,8 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
-import { CircleUserRound, Home, LucideIcon, UtensilsCrossed } from "lucide-react";
+import { CircleUserRound, LucideIcon, UtensilsCrossed } from "lucide-react";
 import Link from "next/link";
-import Image from 'next/image';
+// import Image from 'next/image';
+import { Badge } from "@/components/ui/badge";
 
 export const Dashboard = () => {
     return (
@@ -23,19 +24,14 @@ export const Dashboard = () => {
                     </div>
                 </Card>
             </div>
-            <div className="flex-[3] w-full gap-2 h-full flex flex-col">
+            <div className="flex-[4] w-full gap-2 h-full flex flex-col">
                 <Card className="p-3 flex-1 text-base font-semibold">
                 <p className="text-lg font-semibold p-4">School Path</p>
                 <div className="flex flex-col gap-2">
                     {SCHOOL_DESC.map((school, index) => (
                         <SchoolIcons
                             key={index}
-                            image={school.image}
-                            imgDesc={school.imgDesc}
-                            diploma={school.diploma}
-                            desc={school.desc}
-                            date={school.date}
-                            url="/"
+                            {... school}
                         />
                     ))}
                 </div>
@@ -90,7 +86,7 @@ const ProjectsIcons = (props: ProjectsIconsProps) => {
     return (
         <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/60 transition-colors p-1 rounded-sm">
             <span className="bg-accent text-accent-foreground p-3 rounded-sm">
-                <props.Logo />
+                <props.Logo size={25}/>
             </span>
             <div>
                 <p className="text-base font-semibold">{props.title}</p>
@@ -104,15 +100,18 @@ const ProjectsIcons = (props: ProjectsIconsProps) => {
 
 const SCHOOL_DESC: SchoolIconsProps[] = [
     {
-        image: "",
-        imgDesc: "This Portfolio",
+        image: "https://media.licdn.com/dms/image/v2/D4E0BAQF6kjEZaZVDJA/company-logo_200_200/company-logo_200_200/0/1680783093915/sup_de_vinci_logo?e=2147483647&v=beta&t=gmKhrUx11aQlo3uDDeGWvPvj--iKXCO_SMRKH93djBc",
+        imgSizes: "w-20",
+        imgDesc: "",
         diploma: "Computer Science Bachelor",
-        desc: "2nd Year Student at SDV",
+        desc: "",
         date: "From Sept 2023 - Present",
         url: "/",
+        actual: true,
     },
     {
-        image: "",
+        image: "https://u-paris.fr/wp-content/uploads/2022/01/UniversiteParis_monogramme_couleur_RVB.jpg",
+        imgSizes: "w-36",
         imgDesc: "This Portfolio",
         diploma: "East Asian Languages, Literatures and Civilizations Bachelor",
         desc: "Graduated in Japanese Studies",
@@ -124,22 +123,28 @@ const SCHOOL_DESC: SchoolIconsProps[] = [
 
 type SchoolIconsProps = {
     image: string;
+    imgSizes: string;
     imgDesc: string;
     diploma : string;
     desc: string;
     date: string;
     url: string;
+    actual? : boolean; //Pour ajouter le badge de statut "Actual"
 };
 
 const SchoolIcons = (props: SchoolIconsProps) => {
     return (
         <Link href={props.url}>
             <div className="flex items-center gap-4 hover:bg-accent/60 transition-colors p-1 rounded-sm">
-                <span className="bg-accent text-accent-foreground p-3 rounded-sm">
-                    <img src={props.image} alt={props.imgDesc} className="w-4 h-4 object-contain"/>
+                <span className="text-accent-foreground p-3">
+                    <img src={props.image} alt={props.imgDesc} className={`${props.imgSizes} object-contain rounded-sm`}/> 
+                    {/*Syntaxe requise pour passer la var d'un item dans une className CSS */}
                 </span>
-                <div>
+                <div className="flex items-center">
                     <p className="text-base font-semibold">{props.diploma}</p>
+                    <div>
+                    {props.actual && <Badge variant="outline" className="ml-3">Actual</Badge>}
+                    </div>
                     <p className="text-sm text-muted-foreground">{props.desc}</p>
                 </div>
 
